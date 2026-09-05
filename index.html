@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -10,56 +10,56 @@
     <title>6-bookmark-website</title>
   </head>
   <body>
-    <header class="flex flex-wrap md:flex-nowrap justify-between items-center w-full py-8 px-16">
-      <img src="src/assets/images/logo-bookmark.svg" alt="">
-      <button class=" ms-auto md:hidden btn-menu p-8">
-        <img src="src/assets/images/icon-hamburger.svg" alt="menu icon" class="icon-menu size-6">
-      </button>
-      <nav>
-        <ul class="flex gap-4">
+    <header>
+      <nav class="nav flex flex-wrap md:flex-nowrap md:bg-transparent md:h-auto justify-between py-8 px-16 items-center w-full">
+        <img src="src/assets/images/logo-bookmark.svg" alt="">
+        <button class=" ms-auto md:hidden btn-menu p-8">
+          <img src="src/assets/images/icon-hamburger.svg" alt="menu icon" class="icon-menu size-6">
+        </button>
+        <ul class="nav-menu flex-col items-center gap-4 hidden w-full md:flex md:flex-row md:bg-transparent md:w-fit p-8">
           <li>
-            <a href="#" class="uppercase">features</a>
+            <a href="#features" class="uppercase hover:border-b-2 text-zinc-500 font-medium hover:border-red-500">features</a>
           </li>
           <li>
-            <a href="#" class="uppercase">download</a>
+            <a href="#download" class="uppercase hover:border-b-2  text-zinc-500 font-medium hover:border-red-500">download</a>
           </li>
           <li>
-            <a href="#" class="uppercase">faq</a>
+            <a href="#faq" class="uppercase hover:border-b-2  text-zinc-500 font-medium hover:border-red-500">faq</a>
           </li>
           <li>
-            <a href="#" class="uppercase bg-red-500 py-2 px-4 rounded-lg text-white">login</a>
+            <a href="#" class="uppercase bg-red-500 py-2 px-4 rounded-lg text-white hover:bg-red-800">login</a>
           </li>
         </ul>
       </nav>
     </header>
-    <section class="hero flex flex-col md:flex-row items-center gap-6 py-16 px-20">
-      <div class="flex flex-col gap-4">
-        <h1>A Simple Bookmark Manager</h1>
-        <p>A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-        <div class="flex gap-4">
-          <button class="bg-indigo-500 text-white p-2 rounded-md">Get It On Chrome</button>
-          <button class="bg-gray-400 p-2 rounded-md">Get It On Firefox</button>
-        </div>
-      </div>
-      <div class="relative">
+    <section class="hero flex flex-col md:flex-row-reverse items-center gap-6 py-16 px-20">
+      <div>
         <img src="src/assets/images/illustration-hero.svg" alt="">
       </div>
+      <div class="flex flex-col gap-4">
+        <h1 class="font-bold text-4xl max-w-md">A Simple Bookmark Manager</h1>
+        <p class="text-zinc-500">A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <button class="bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-800">Get It On Chrome</button>
+          <button class="bg-gray-400 p-2 rounded-md hover:bg-gray-700">Get It On Firefox</button>
+        </div>
+      </div>
     </section>
-    <section class="features flex flex-col gap-6 items-center">
+    <section class="flex flex-col gap-6 items-center" id="features">
       <h2 class="text-2xl font-black">Features</h2>
-      <p class="text-center max-w-md">
+      <p class="text-center max-w-md text-zinc-500">
         Our aim is to make it quick and easy for you to access your favorite websites.
         Your bookmarks sync between your devices so you can access them on the go.
       </p>
       <div class="tabs-panel" role="tablist">
-        <div class="flex gap-4 justify-center">
+        <div class="flex flex-col md:flex-row items-center gap-4 justify-center">
           <button
             role="tab"
             aria-selected="true"
             aria-controls="panel-one"
             id="tab-one"
             data-tab="one"
-            class="tab-btn"
+            class="tab-btn border-b  border-red-500 text-red-500 hover:text-red-800"
           >Simple Bookmarking</button>
           <button
             role="tab"
@@ -67,7 +67,7 @@
             aria-controls="panel-two"
             id="tab-two"
             data-tab="two"
-            class="tab-btn"
+            class="tab-btn hover:text-red-800"
           >Speedy Searching</button>
           <button
             role="tab"
@@ -75,7 +75,7 @@
             aria-controls="panel-three"
             id="tab-three"
             data-tab="three"
-            class="tab-btn"
+            class="tab-btn hover:text-red-800"
           >Easy Sharing</button>
         </div>
         <section
@@ -89,11 +89,11 @@
           </div>
           <div class="flex flex-col gap-6 p-8 max-w-lg">
             <h3 class="text-lg font-bold">Boormark in one click</h3>
-            <p>
+            <p class="text-zinc-500">
               Organize your bookmarks however you like. Our simple drag-and-drop interface
               gives you complete control over how you manage your favorites sites.
             </p>
-            <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg self-start">More Info</a>
+            <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg self-start hover:bg-indigo-800">More Info</a>
           </div>
         </section>
         <section
@@ -107,11 +107,11 @@
           </div>
           <div class="flex flex-col gap-6 p-8 max-w-lg">
             <h3 class="text-lg font-bold">Intelligent search</h3>
-            <p>
+            <p class="text-zinc-500">
               Our powerful search feature will help you find saved sites in no time al all.
               No need to trawl through all of your bookmarks.
             </p>
-            <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg self-start">
+            <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg self-start hover:bg-indigo-800">
               More Info
             </a >
           </div>
@@ -127,85 +127,85 @@
           </div>
           <div class="flex flex-col gap-6 p-8 max-w-lg">
             <h3 class="text-lg font-bold">Share your bookmarks</h3>
-            <p>
+            <p class="text-zinc-500">
               Easily share your bookmarks and collection with others. Create a shareable a link that you can send at the click of a button.
             </p>
-            <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg self-start">More Info</a>
+            <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg self-start hover:bg-indigo-800">More Info</a>
           </div>
         </section>
       </div>
     </section>
     <section class="download flex flex-col items-center gap-6">
       <h2 class="text-2xl font-black">Download the extension</h2>
-      <p class="text-center max-w-md">
+      <p class="text-center max-w-md text-zinc-500">
         We've got more browsers in the pipeline. Please do let us know if you've gota favourite you'd like us to prioritize.
       </p>
       <div class="flex flex-col md:flex-row gap-6 py-12 px-20">
         <div class="flex flex-col gap-6 items-center p-6 shadow-lg h-full">
           <img src="src/assets/images/logo-chrome.svg" alt="" class="w-16">
           <p class="font-bold">Add to Chrome</p>
-          <p>Minimun version 62</p>
+          <p class="text-zinc-500">Minimun version 62</p>
           <img src="src/assets/images/bg-dots.svg" alt="w-full">
-          <button class="bg-indigo-500 py-2 px-6 rounded-lg text-white text-sm">Add & Install Extension</button>
+          <button class="bg-indigo-500 py-2 px-6 rounded-lg text-white text-sm hover:bg-indigo-800">Add & Install Extension</button>
         </div>
         <div class="flex flex-col gap-6 items-center p-6 md:mt-6 shadow-lg h-full">
           <img src="src/assets/images/logo-firefox.svg" alt="" class="w-16">
           <p class="font-bold">Add to Chrome</p>
-          <p>Minimun version 55</p>
+          <p class="text-zinc-500">Minimun version 55</p>
           <img src="src/assets/images/bg-dots.svg" alt="w-full">
-          <button class="bg-indigo-500 py-2 px-6 rounded-lg text-white text-sm">Add & Install Extension</button>
+          <button class="bg-indigo-500 py-2 px-6 rounded-lg text-white text-sm hover:bg-indigo-800">Add & Install Extension</button>
         </div>
         <div class="flex flex-col gap-6 items-center p-6 md:mt-12 shadow-lg h-full">
           <img src="src/assets/images/logo-chrome.svg" alt="" class="w-16">
           <p class="font-bold">Add to Chrome</p>
-          <p>Minimun version 46</p>
+          <p class="text-zinc-500">Minimun version 46</p>
           <img src="src/assets/images/bg-dots.svg" alt="w-full">
-          <button class="bg-indigo-500 py-2 px-6 rounded-lg text-white text-sm">Add & Install Extension</button>
+          <button class="bg-indigo-500 py-2 px-6 rounded-lg text-white text-sm hover:bg-indigo-800">Add & Install Extension</button>
         </div>
       </div>
     </section>
-    <section class="faq flex flex-col items-center">
+    <section class="faq flex flex-col items-center gap-6">
       <h2 class="text-2xl font-black">Frequently Asked Questions</h2>
-      <p class="text-center max-w-md mb-8">
+      <p class="text-center max-w-md mb-8 text-zinc-500">
         Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us
       </p>
       <details name="faq" class="group p-4 w-full max-w-lg">
         <summary class="flex justify-between cursor-pointer list-none font-medium max-w-lg">
           What is Bookmark?
-          <img src="src/assets/images/icon-arrow.svg" alt="" class="transition-transform group-open:rotate-180 size-4">
+          <img src="src/assets/images/icon-arrow.svg" alt="" class="transition-transform group-open:rotate-180 size-4 group-open:text-red-500">
         </summary>
-        <p class="mt-2 text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, ducimus!</p>
+        <p class="mt-2 text-zinc-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, ducimus!</p>
       </details>
       <details name="faq" class="group p-4 w-full max-w-lg">
         <summary class="flex justify-between cursor-pointer list-none font-medium max-w-lg">
           How I can request a new browser?
           <img src="src/assets/images/icon-arrow.svg" alt="" class="transition-transform group-open:rotate-180 size-4">
         </summary>
-        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, iusto.</p>
+        <p class="mt-2 text-zinc-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, iusto.</p>
       </details>
       <details name="faq" class="group p-4 w-full max-w-lg">
         <summary class="flex justify-between cursor-pointer list-none font-medium max-w-lg">
           Is there a mobile app?
           <img src="src/assets/images/icon-arrow.svg" alt="" class="transition-transform group-open:rotate-180 size-4">
         </summary>
-        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, qui.</p>
+        <p class="mt-2 text-zinc-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, qui.</p>
       </details>
       <details name="faq" class="group p-4 w-full max-w-lg">
         <summary class="flex justify-between cursor-pointer list-none font-medium max-w-lg">
           What about other chromium browsers?
           <img src="src/assets/images/icon-arrow.svg" alt="" class="transition-transform group-open:rotate-180 size-4">
         </summary>
-        <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, autem?</p>
+        <p class="mt-2 text-zinc-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, autem?</p>
       </details>
     </section>
-    <section class="contact flex flex-col gap-6 items-center bg-indigo-500 py-8 w-full">
+    <section class="contact flex flex-col gap-6 items-center bg-indigo-500 py-8 mt-6 w-full">
       <h2 class="text-white text-xl font-bold text-center">
         Stay up-to-date with what we're doing
       </h2>
       <p class="text-white text-sm -order-1 uppercase">35.000+ already joined</p>
       <form class="flex gap-6">
         <input type="text" placeholder="Enter your email" class="bg-white py-2 px-4 rounded-lg">
-        <button class="bg-red-500 rounded-lg text-white py-2 px-4">Contact Us</button>
+        <button class="bg-red-500 rounded-lg text-white py-2 px-4 hover:bg-red-800">Contact Us</button>
       </form>
     </section>
     <footer class="flex flex-col md:flex-row items-center justify-around gap-6 p-8 bg-zinc-800">
